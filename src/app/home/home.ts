@@ -8,33 +8,35 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.css',
 })
 export class Home {
-  nom ="Ans";
-  imgurl="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1280px-Angular_gradient_logo.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+  nom = 'Mouhaned';
+  imgurl =
+    'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Angular_gradient_logo.png/1280px-Angular_gradient_logo.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=thumbnail';
 
-  bonjour() {alert('Bonjour ');}
+  bonjour() {
+    alert('Bonjour ');
+  }
 
+  nom1 = 'amen';
 
-  nom1="amen"
+  students = ['Ahmed', 'Ali', 'Amine', 'Aymen', 'Anis'];
+  students2 = [
+    { name: 'Ahmed', age: 20 },
+    { name: 'Ali', age: 21 },
+    { name: 'Amine', age: 22 },
+    { name: 'Aymen', age: 23 },
+    { name: 'Anis', age: 24 },
+  ];
 
-  students=["Ahmed","Ali","Amine","Aymen","Anis"]
-  students2=[
-    {name:"Ahmed",age:20},
-    {name:"Ali",age:21},
-    {name:"Amine",age:22},
-    {name:"Aymen",age:23},
-    {name:"Anis",age:24}
-  ]
+  //
+  count = 0;
+  //signal
+  counts = signal(0);
 
-//
-count=0;
-//signal
-counts=signal(0);
-
-incrementSimple(){
-  this.count++;
-}
-///signal
-increment() {
-    this.counts.update(v => v + 1);
+  incrementSimple() {
+    this.count++;
+  }
+  ///signal
+  increment() {
+    this.counts.update((v) => v + 1);
   }
 }
